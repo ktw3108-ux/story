@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff8e7">
+  <meta name="description" content="윤지현이 초대합니다. 같이 놀자!">
+  <meta property="og:title" content="같이 놀자! 🎉 윤지현의 초대장">
+  <meta property="og:description" content="11월 14일 토요일, 동국대학교 후문에서 만나요!">
+  <meta property="og:type" content="website">
+  <title>초대장</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/config.js"></script>
+  <script defer src="js/map.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/dday.js"></script>
+</head>
+<body>
+  <main class="page">
+
+    <!-- 1. 메인 -->
+    <header class="hero">
+      <span class="floaty f1" aria-hidden="true">🎈</span>
+      <span class="floaty f2" aria-hidden="true">🎉</span>
+      <span class="floaty f3" aria-hidden="true">⭐</span>
+      <span class="floaty f4" aria-hidden="true">🍭</span>
+      <p class="hero-eyebrow">INVITATION</p>
+      <div class="hero-ornament" aria-hidden="true"></div>
+      <h1 id="hero-title" class="hero-title"></h1>
+      <p id="hero-hosts" class="hero-hosts"></p>
+      <div class="hero-meta">
+        <p id="hero-date"></p>
+        <p id="hero-venue"></p>
+      </div>
+      <a class="scroll-hint" href="#invite" aria-label="아래로 이동">
+        <span></span>
+      </a>
+    </header>
+
+    <!-- 2. 초대 문구 -->
+    <section id="invite" class="section reveal">
+      <p class="section-eyebrow">INVITE</p>
+      <h2 class="section-title">놀러 와요! 🙌</h2>
+      <p id="invite-message" class="invite-message"></p>
+      <p id="invite-hosts" class="invite-hosts"></p>
+    </section>
+
+    <!-- 3. 일시 + D-DAY -->
+    <section class="section section-tint reveal">
+      <p class="section-eyebrow">DATE</p>
+      <h2 class="section-title">언제? 📅</h2>
+      <p id="event-date" class="event-date"></p>
+      <p id="event-time" class="event-time"></p>
+
+      <div class="dday">
+        <p id="dday-badge" class="dday-badge">D-0</p>
+        <p id="dday-caption" class="dday-caption"></p>
+        <div id="dday-timer" class="countdown" role="timer" aria-live="off">
+          <div class="cd-unit"><span id="cd-days" class="cd-num">0</span><span class="cd-label">일</span></div>
+          <div class="cd-unit"><span id="cd-hours" class="cd-num">00</span><span class="cd-label">시간</span></div>
+          <div class="cd-unit"><span id="cd-minutes" class="cd-num">00</span><span class="cd-label">분</span></div>
+          <div class="cd-unit"><span id="cd-seconds" class="cd-num">00</span><span class="cd-label">초</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 장소 + 지도 -->
+    <section class="section reveal">
+      <p class="section-eyebrow">LOCATION</p>
+      <h2 class="section-title">어디서? 📍</h2>
+      <p id="venue-name" class="venue-name"></p>
+      <p class="venue-address">
+        <span id="venue-address"></span>
+        <button id="copy-address" class="text-btn" type="button">주소 복사</button>
+      </p>
+
+      <div class="map-wrap">
+        <iframe id="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+
+      <div class="nav-buttons">
+        <a id="nav-naver" class="nav-btn" target="_blank" rel="noopener">
+          <span class="nav-dot naver" aria-hidden="true">N</span>네이버 지도
+        </a>
+        <a id="nav-kakao" class="nav-btn" target="_blank" rel="noopener">
+          <span class="nav-dot kakao" aria-hidden="true">K</span>카카오맵
+        </a>
+        <a id="nav-tmap" class="nav-btn" href="#">
+          <span class="nav-dot tmap" aria-hidden="true">T</span>티맵
+        </a>
+      </div>
+
+      <dl id="transport-list" class="transport"></dl>
+    </section>
+
+    <!-- 5. 연락처 -->
+    <section class="section section-tint sky reveal">
+      <p class="section-eyebrow">CONTACT</p>
+      <h2 class="section-title">궁금하면 연락! 📞</h2>
+      <ul id="contact-list" class="contacts"></ul>
+    </section>
+
+    <!-- 6. 공유 -->
+    <footer class="section footer reveal">
+      <div class="share-buttons">
+        <button id="share-btn" class="primary-btn" type="button">친구한테 공유하기 💌</button>
+        <button id="copy-link-btn" class="secondary-btn" type="button">링크 복사 🔗</button>
+      </div>
+      <p class="footer-note">그날 만나요! <span class="wave" aria-hidden="true">👋</span></p>
+    </footer>
+
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
